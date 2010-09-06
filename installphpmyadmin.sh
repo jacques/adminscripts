@@ -2,7 +2,7 @@
 # Downloads and installs phpMyAdmin
 #
 # Copyright 2005-2010 Jacques Marneweck <jacques@powertrip.co.za>
-PHPMYADMIN_VERSION=3.3.3
+PHPMYADMIN_VERSION=3.3.6
 
 wget http://downloads.sourceforge.net/project/phpmyadmin/phpMyAdmin/${PHPMYADMIN_VERSION}/phpMyAdmin-${PHPMYADMIN_VERSION}-all-languages.tar.bz2?use_mirror=softlayer
 
