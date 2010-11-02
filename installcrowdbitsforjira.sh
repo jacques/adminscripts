@@ -4,7 +4,7 @@
 # http://confluence.atlassian.com/display/CROWD/Integrating+Crowd+with+Atlassian+JIRA#IntegratingCrowdwithAtlassianJIRA-Step2.ConfiguringJIRAtotalktoCrowd
 
 CROWD_VERSION=2.0.7
-JIRA_VERSION=4.1.2
+JIRA_VERSION=4.2
 CROWD_PATH=/home/crowd/atlassian-crowd-${CROWD_VERSION}
 JIRA_PATH=/home/jira/atlassian-jira-enterprise-${JIRA_VERSION}-standalone
 
@@ -18,7 +18,10 @@ fi
 
 JIRA_PASS=$1
 
+if [ -f ${JIRA_PATH}/atlassian-jira/WEB-INF/lib/crowd-integration-client-2.0.4.jar ]; then
 rm ${JIRA_PATH}/atlassian-jira/WEB-INF/lib/crowd-integration-client-2.0.4.jar
+fi
+
 cp -pr ${CROWD_PATH}/client/crowd-integration-client-${CROWD_VERSION}.jar ${JIRA_PATH}/atlassian-jira/WEB-INF/lib
 cp -pr ${CROWD_PATH}/client/conf/crowd.properties ${JIRA_PATH}/atlassian-jira/WEB-INF/classes
 cp -pr ${CROWD_PATH}/client/conf/crowd-ehcache.xml ${JIRA_PATH}/atlassian-jira/WEB-INF/classes/crowd-ehcache.xml
