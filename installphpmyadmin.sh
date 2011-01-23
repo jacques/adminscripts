@@ -1,7 +1,7 @@
 #!/opt/local/bin/bash
 # Downloads and installs phpMyAdmin
 #
-# Copyright (c) 2005-2010 Jacques Marneweck <jacques@powertrip.co.za>
+# Copyright (c) 2005-2011 Jacques Marneweck <jacques@powertrip.co.za>
 # 
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documentation files (the "Software"), to deal
@@ -22,7 +22,7 @@
 # THE SOFTWARE.
 
 
-PHPMYADMIN_VERSION=3.3.8
+PHPMYADMIN_VERSION=3.3.8.1
 
 wget http://downloads.sourceforge.net/project/phpmyadmin/phpMyAdmin/${PHPMYADMIN_VERSION}/phpMyAdmin-${PHPMYADMIN_VERSION}-all-languages.tar.bz2?use_mirror=softlayer
 
