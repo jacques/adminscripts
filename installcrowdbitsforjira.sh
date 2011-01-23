@@ -3,7 +3,7 @@
 #
 # http://confluence.atlassian.com/display/CROWD/Integrating+Crowd+with+Atlassian+JIRA#IntegratingCrowdwithAtlassianJIRA-Step2.ConfiguringJIRAtotalktoCrowd
 # 
-# Copyright (c) 2010 Jacques Marneweck <jacques@powertrip.co.za>
+# Copyright (c) 2010-2011 Jacques Marneweck <jacques@powertrip.co.za>
 # 
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documentation files (the "Software"), to deal
@@ -24,7 +24,7 @@
 # THE SOFTWARE.
 
 CROWD_VERSION=2.1.0
-JIRA_VERSION=4.2.1-b588
+JIRA_VERSION=4.2.2-b589
 CROWD_PATH=/home/crowd/atlassian-crowd-${CROWD_VERSION}
 JIRA_PATH=/home/jira/atlassian-jira-enterprise-${JIRA_VERSION}-standalone
 
