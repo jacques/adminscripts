@@ -3,7 +3,7 @@
 #
 # http://confluence.atlassian.com/display/CROWD/Integrating+Crowd+with+Atlassian+Confluence
 # 
-# Copyright (c) 2010 Jacques Marneweck <jacques@powertrip.co.za>
+# Copyright (c) 2010-2011 Jacques Marneweck <jacques@powertrip.co.za>
 # 
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documentation files (the "Software"), to deal
@@ -24,7 +24,7 @@
 # THE SOFTWARE.
 
 CROWD_VERSION=2.1.0
-CONFLUENCE_VERSION=3.4.5
+CONFLUENCE_VERSION=3.4.6
 CROWD_PATH=/home/crowd/atlassian-crowd-${CROWD_VERSION}
 CONFLUENCE_PATH=/home/confluence/confluence-${CONFLUENCE_VERSION}-std
 CROWD_HOSTNAME=your.crowd.host
@@ -37,6 +37,8 @@ echo "Usage: $0 <CONFLUENCE APP PASSWORD>"
 fi
 
 CONFLUENCE_PASS=$1
+
+cp -pr ${CROWD_PATH}/client/crowd-integration-client-${CROWD_VERSION}.jar ${CONFLUENCE_PATH}/confluence/WEB-INF/lib/
 
 cp -pr ${CROWD_PATH}/client/crowd-integration-client-${CROWD_VERSION}.jar ${CONFLUENCE_PATH}/confluence/WEB-INF/lib
 cp -pr ${CROWD_PATH}/client/conf/crowd.properties ${CONFLUENCE_PATH}/confluence/WEB-INF/classes
