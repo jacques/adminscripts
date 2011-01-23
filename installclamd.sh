@@ -27,3 +27,7 @@ pkgin -y in clamav
 gsed -i'' '/^Example/s/Example/#Example/' freshclam.conf clamd.conf
 gsed -i'' '/^#DatabaseMirror/s/XY/us/' freshclam.conf
 gsed -i'' '/^#DatabaseMirror/s/#//' freshclam.conf
+
+gsed -i'' '/^#PidFile/s/#//' /opt/local/etc/clamd.conf
+gsed -i'' '/^#LocalSocket /s/#//' /opt/local/etc/clamd.conf
+gsed -i'' '/^#FixStaleSocket/s/#//' /opt/local/etc/clamd.conf
