@@ -23,8 +23,8 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 # THE SOFTWARE.
 
-CROWD_VERSION=2.1.0
-CONFLUENCE_VERSION=3.4.6
+CROWD_VERSION=2.2.2
+CONFLUENCE_VERSION=3.5
 CROWD_PATH=/home/crowd/atlassian-crowd-${CROWD_VERSION}
 CONFLUENCE_PATH=/home/confluence/confluence-${CONFLUENCE_VERSION}-std
 CROWD_HOSTNAME=your.crowd.host
@@ -47,3 +47,11 @@ cp -pr ${CROWD_PATH}/client/conf/crowd-ehcache.xml ${CONFLUENCE_PATH}/confluence
 gsed -i'' '/^application.name/s/crowd/confluence/' ${CONFLUENCE_PATH}/confluence/WEB-INF/classes/crowd.properties
 gsed -i'' '/^application.password/s/${CROWD_PASS}/${CONFLUENCE_APP_PASS}/' ${CONFLUENCE_PATH}/confluence/WEB-INF/classes/crowd.properties
 gsed -i"" -e "s/localhost/${CROWD_HOSTNAME}/g" ${CONFLUENCE_PATH}/confluence/WEB-INF/classes/crowd.properties
+
+# Enable crowd for user authentication in confluence
+# First comment out confluences user database
+gsed -i"" '/com.atlassian.confluence.user.ConfluenceAuthenticator/s/^/<!--/' ${CONFLUENCE_PATH}/confluence/WEB-INF/classes/seraph-config.xml
+gsed -i"" '/com.atlassian.confluence.user.ConfluenceAuthenticator/s/$/-->/' ${CONFLUENCE_PATH}/confluence/WEB-INF/classes/seraph-config.xml
+# Now enable the crowd SSO
+gsed -i"" '/com.atlassian.confluence.user.ConfluenceCrowdSSOAuthenticator/s/<!--//' ${CONFLUENCE_PATH}/confluence/WEB-INF/classes/seraph-config.xml
+gsed -i"" '/com.atlassian.confluence.user.ConfluenceCrowdSSOAuthenticator/s/-->//' ${CONFLUENCE_PATH}/confluence/WEB-INF/classes/seraph-config.xml
