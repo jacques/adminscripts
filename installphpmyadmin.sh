@@ -22,7 +22,7 @@
 # THE SOFTWARE.
 
 
-PHPMYADMIN_VERSION=3.3.8.1
+PHPMYADMIN_VERSION=3.3.10
 
 wget http://downloads.sourceforge.net/project/phpmyadmin/phpMyAdmin/${PHPMYADMIN_VERSION}/phpMyAdmin-${PHPMYADMIN_VERSION}-all-languages.tar.bz2?use_mirror=softlayer
 
