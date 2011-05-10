@@ -23,10 +23,10 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 # THE SOFTWARE.
 
-CROWD_VERSION=2.1.0
-JIRA_VERSION=4.2.2-b589
+CROWD_VERSION=2.2.4
+JIRA_VERSION=4.3.3
 CROWD_PATH=/home/crowd/atlassian-crowd-${CROWD_VERSION}
-JIRA_PATH=/home/jira/atlassian-jira-enterprise-${JIRA_VERSION}-standalone
+JIRA_PATH=/home/jira/atlassian-jira-${JIRA_VERSION}
 
 CROWD_PASS=`grep pass ${CROWD_PATH}/client/conf/crowd.properties | awk '{ print $2 }'`
 
