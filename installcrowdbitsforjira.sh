@@ -38,9 +38,13 @@ fi
 
 JIRA_PASS=$1
 
-if [ -f ${JIRA_PATH}/atlassian-jira/WEB-INF/lib/crowd-integration-client-2.0.7.jar ]; then
-  rm ${JIRA_PATH}/atlassian-jira/WEB-INF/lib/crowd-integration-client-2.0.7.jar
-fi
+VERS=(2.0.7 2.2.2)
+for ver in $VERS[@]
+do
+  if [ -f ${JIRA_PATH}/atlassian-jira/WEB-INF/lib/crowd-integration-client-2.0.7.jar ]; then
+    rm ${JIRA_PATH}/atlassian-jira/WEB-INF/lib/crowd-integration-client-2.0.7.jar
+  fi
+done
 
 cp -pr ${CROWD_PATH}/client/crowd-integration-client-${CROWD_VERSION}.jar ${JIRA_PATH}/atlassian-jira/WEB-INF/lib
 cp -pr ${CROWD_PATH}/client/conf/crowd.properties ${JIRA_PATH}/atlassian-jira/WEB-INF/classes
