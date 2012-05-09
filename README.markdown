@@ -10,7 +10,7 @@ These scripts are all released under the MIT license.
 License
 =======
 
-Copyright (c) 2010-2011 Jacques Marneweck <jacques@powertrip.co.za>
+Copyright (c) 2010-2012 Jacques Marneweck <jacques@powertrip.co.za>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -37,3 +37,4 @@ Contact
  * [@jacques](http://twitter.com/jacques) on twitter
  * <http://www.powertrip.co.za/> personal website
  * <http://www.powertrip.co.za/blog/> personal blog
+ * <http://www.jacquesmarneweck.com/blog/> newer personal blog
